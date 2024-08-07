@@ -1,7 +1,8 @@
 import axios from 'axios';
 import {toast} from "react-toastify";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const axiosClient = axios.create({
   baseURL: `${apiUrl}/api/auth`,
 });
